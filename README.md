@@ -72,6 +72,45 @@ your-project-folder/
 
 ---
 
+## Results
+
+Below are some sample evaluation outputs from the `test_model_accuracy.py` script:
+
+
+```
+\[1971/2000] ✅ Fully Correct (100.00%): 'I propose to return now to the subject of Newgate executions,'
+\[1972/2000] 🟡 Minor Errors (78.80%): 'which we left at the time of the discontinuance of the long-practiced procession to Tyburn.'
+-> Vosk transcribed: 'which we left at the time of the discontinuance of the law practice procession to tiber'
+\[1973/2000] ✅ Fully Correct (100.00%): 'The reasons for this change were fully set forth in a previous chapter.'
+\[1974/2000] 🟡 Minor Errors (95.33%): 'The terrible spectacle was as demoralizing to the public, for whose admonition it was intended,'
+-> Vosk transcribed: 'the terrible spectacle was is demoralizing to the public for who's admonition it was intended'
+\[1975/2000] ✅ Fully Correct (100.00%): 'as the exposure was brutal and cruel towards the principal actors.'
+...
+\[2000/2000] ✅ Fully Correct (100.00%): 'when, in pursuance of an order issued by the Recorder to the sheriffs of Middlesex and the keeper of His Majesty's jail, Newgate,'
+
+```
+
+### Final Accuracy Report
+```
+
+=====================
+Final Accuracy Report
+=====================
+
+Total Sentences Tested: 2000
+Fully Correct: 740 (37.00%)
+Minor Errors (>=70%): 1190 (59.50%)
+Incorrect (<70%): 56 (2.80%)
+
+```
+
+✅ **Fully Correct**: Exact match (case/punctuation normalized)  
+🟡 **Minor Errors**: Word-level accuracy ≥ 70%  
+❌ **Incorrect**: Word-level accuracy < 70%  
+
+---
+
+
 ## How to Use
 
 ### A. Run the Pronunciation App
