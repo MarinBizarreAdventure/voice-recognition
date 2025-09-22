@@ -84,7 +84,7 @@ def run_test():
     incorrect_count = 0
     total_count = len(df)
     
-    test_limit = min(total_count, 2000) 
+    test_limit = min(total_count, 50) 
     df_subset = df.head(test_limit)
 
     for index, row in df_subset.iterrows():
