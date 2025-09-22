@@ -142,6 +142,13 @@ test_limit = min(total_count, 50)
 
 Modify the number (e.g., `100`) or remove `min(total_count, 50)` to test the entire dataset.
 
+Edit `ACCURACY_THRESHOLD_PERCENTAGE ` to change the percentage of corectness to count as corect:
+
+```python
+# Default is 70 (10 line in app.py)
+ACCURACY_THRESHOLD_PERCENTAGE = 70
+
+```
 ---
 
 ## Understanding the Accuracy Report
