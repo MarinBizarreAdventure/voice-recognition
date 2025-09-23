@@ -6,14 +6,13 @@ This project provides a **Streamlit web application** for real-time English pron
 ---
 
 ## Features
-- **Interactive Web App (`app.py`)**  
-  An intuitive interface where a user can speak a word or phrase, have the model transcribe it, and see a real-time correctness score.
 
-- **Model Accuracy Test (`test_model_accuracy.py`)**  
-  A powerful script that evaluates the Vosk model's performance on a large dataset of English audio, providing detailed accuracy metrics.
+- **Interactive Web App (`app.py`)**: An intuitive interface where a user can type a phrase, listen to a natural-sounding AI voice read it, and then record their own pronunciation for an instant accuracy score.
+- **High-Quality Text-to-Speech**: Uses the Marvis TTS model to generate clear, expressive audio, allowing users to hear the correct pronunciation before they practice.
+- **Offline Speech Recognition**: The Vosk ASR model runs entirely locally, ensuring privacy and functionality without a constant internet connection.
+- **Model Accuracy Test (`test_model_accuracy.py`)**: A powerful script that evaluates the Vosk model's performance on the LJ Speech dataset, providing detailed accuracy metrics.
 
-- **Offline Functionality**  
-  All speech recognition and text-to-speech tasks are handled offline, requiring no internet connection after the initial setup.
+**Note**: The application requires an internet connection on the first run to download the Marvis TTS model and its dependencies from Hugging Face. After the initial download, it can run offline.
 
 
 
@@ -21,9 +20,11 @@ This project provides a **Streamlit web application** for real-time English pron
 
 ### 1. Create and Activate a Virtual Environment
 
+It is highly recommended to use a Python version between 3.9 and 3.12, as newer versions may have compatibility issues with some libraries.
+
 ```bash
-# Create a virtual environment
-python -m venv venv
+# Create a virtual environment (e.g., with Python 3.11)
+python3.11 -m venv venv
 
 # Activate the environment
 # On macOS and Linux
@@ -35,13 +36,9 @@ source venv/bin/activate
 
 ### 2. Install Python Libraries
 
-Generate and install dependencies:
+Install the required dependencies from the `requirements.txt` file.
 
 ```bash
-# Generate requirements.txt
-pip freeze > requirements.txt
-
-# Install dependencies
 pip install -r requirements.txt
 ```
 
